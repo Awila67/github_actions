@@ -8,31 +8,19 @@ jobs:
       - name: Checkout on master
         uses: actions/checkout@v3
 
-<<<<<<< HEAD
       - name: Set up Python
         uses: actions/setup-python@master
         with:
           python-version: "3.x"
-=======
-  - name: Set up Python
-    uses: actions/setup-python@master
-    with:
-      python-version: "3.x"
-      
-- name: Install pytest and flake8
-  run: |
-    pip install pytest
-    pip install flake8
->>>>>>> refs/remotes/origin/main
 
       - name: Install pytest and flake8
         run: |
           pip install pytest
           pip install flake8
 
-      - name: Run tests
-        run: |
-          pytest
+     - name: Run tests
+       run: |
+         pytest
 
-      - name: Run flake8
-        uses: py-actions/flake8@v2
+     - name: Run flake8
+       uses: py-actions/flake8@v2
